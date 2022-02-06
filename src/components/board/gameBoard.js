@@ -67,7 +67,7 @@ const GameBoard = () => {
     return (
         <div>
             <Dice playerTurn={currentTurn} onRollDice={onRollDiceHandler} playerPosition={getCurrentPlayerTurnPosition()} />
-            <Board />
+            <Board ladders={LADDERS} snakes={SNAKES} />
         </div>
     );
 }

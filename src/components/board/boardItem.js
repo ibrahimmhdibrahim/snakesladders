@@ -15,8 +15,8 @@ const BoardItem = (props) => {
     }
 
     return (
-        <div className={`boardItem ${props.placementOrder}`} style={{order: props.placementOrder}}>
-            {props.number}
+        <div className={`boardItem ${props.placementOrder}`} style={{order: props.placementOrder}} data-row={props.row} data-column={props.column}>
+            <p>{props.number}</p>
             {playerPositionHandler()}
             {playersList.map((player) => <PlayerToken transition={player.position === props.number} name={player.name} />)}
         </div>

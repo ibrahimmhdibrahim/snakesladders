@@ -5,15 +5,41 @@
 }
 
 .playBoard {
+    position: relative;
     display: grid;
-    max-height: 800px;
+    max-height: 600px;
+    max-width: 600px;
     border: 1px solid mediumaquamarine;
     grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
 
 .boardItem {
     text-align: center;
-    padding: 40% 0;
+    height: 60px;
+    width: 60px;
     border: 1px solid mediumaquamarine;
     background-color: aquamarine;
+}
+
+.boardItem p {
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 12px;
+    position: relative;
+    transform: translateY(-50%);
+}
+
+.ladder {
+    width: 20px;
+    height: 100px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: repeat-y;
+    transform: rotate(135deg);
+    transform-origin: bottom;
+    bottom: 150px;
+    left: 330px;
 }
